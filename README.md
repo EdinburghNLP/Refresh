@@ -1,6 +1,6 @@
 # Refresh: Ranking Sentences for Extractive Summarization with Reinforcement Learning
 
-This repository releases codes for our Refresh model. They use Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
+This repository releases codes for our Refresh model. They are improved upon our code for [Sidenet](https://github.com/shashiongithub/sidenet). They use Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
 
 Please contact me at shashi.narayan@ed.ac.uk for any question.
 
@@ -31,5 +31,5 @@ Model Outputs
 Human Evaluation Data
 Code
 
-Demo link
+Preprocessing codes
 
