@@ -1,6 +1,6 @@
 # Refresh: Ranking Sentences for Extractive Summarization with Reinforcement Learning
 
-This repository releases codes for our Refresh model. They are improved upon our code for [Sidenet](https://github.com/shashiongithub/sidenet). They use Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
+This repository releases codes for our Refresh model, an improved version of [Sidenet](https://github.com/shashiongithub/sidenet). They use Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
 
 Please contact me at shashi.narayan@ed.ac.uk for any question.
 
@@ -10,11 +10,16 @@ Please cite this paper if you use any of these:
 
 > Single document summarization is the task of producing a shorter version of a document while preserving its principal information content. In this paper we conceptualize extractive summarization as a sentence ranking task and propose a novel training algorithm which globally optimizes the ROUGE evaluation metric through a reinforcement learning objective. We use our algorithm to train a neural summarization model on the CNN and DailyMail datasets and demonstrate experimentally that it outperforms state-of-the-art extractive and abstractive systems when evaluated automatically and by humans.
 
-## Training and Evaluation 
+## CNN and Dailymail Data
+
+### Preprocessed Data and Word Embedding File
+
+### Pretrained Model and Outputs
+
+### Human Evaluation Data
 
 
-
-## Pretrained Model and Human Evaluation Data
+## Training and Evaluation Instructions
 
 
 ## Live Demo
@@ -31,5 +36,5 @@ Model Outputs
 Human Evaluation Data
 Code
 
-Preprocessing codes
+Preprocessing codes: estimate multioracle
 
