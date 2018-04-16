@@ -26,33 +26,27 @@ We run for certain number of epochs and then we estimate ROUGE scores and
 #### CNN 
 
 ```
-export CUDA_VISIBLE_DEVICES=2
-export TMP=/address/to/TMP-gpu2
-
 mkdir -p /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5
 
 # Training
-python document_summarizer_training_testing.py --tmp_directory $TMP --use_gpu /gpu:2 --data_mode cnn --train_dir /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5 --num_sample_rollout 5 > /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5/train.log
+python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode cnn --train_dir /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5 --num_sample_rollout 5 > /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5/train.log
 
 # Evaluation
-python document_summarizer_training_testing.py --tmp_directory $TMP --use_gpu /gpu:2 --data_mode cnn --exp_mode test --model_to_load 11 --train_dir /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5 --num_sample_rollout 5 > /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5/test.model11.log
+python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode cnn --exp_mode test --model_to_load 11 --train_dir /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5 --num_sample_rollout 5 > /address/to/training/directory/cnn-reinforcementlearn-singlesample-from-moracle-noatt-sample5/test.model11.log
 ```
 
 #### DailyMail
 
 ```
-export CUDA_VISIBLE_DEVICES=2
-export TMP=/address/to/TMP-gpu2
-
 mkdir -p /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15
 
 # Training
-python document_summarizer_training_testing.py --tmp_directory $TMP --use_gpu /gpu:2 --data_mode dailymail --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/train.log
+python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dailymail --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/train.log
 
 # Evaluation
-python document_summarizer_training_testing.py --tmp_directory $TMP --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 7 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model7.log
+python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 7 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model7.log
 
-python document_summarizer_training_testing.py --tmp_directory $TMP --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 10 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model10.log
+python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 10 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model10.log
 ```
 
 ## Blog and Live Demo

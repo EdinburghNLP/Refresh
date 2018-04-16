@@ -22,7 +22,7 @@ import tensorflow as tf
 
 # VERY IMPORTANT # : SET this directory as TMP by exporting it 
 
-tf.app.flags.DEFINE_string("tmp_directory", "/tmp/directory/for/rouge", "Temporary directory used by rouge code.")
+tf.app.flags.DEFINE_string("tmp_directory", "/tmp", "Temporary directory used by rouge code.")
 
 tf.app.flags.DEFINE_string("use_gpu", "/gpu:3", "Specify which gpu to use.")
 
