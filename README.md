@@ -14,7 +14,7 @@ Please cite this paper if you use any of these:
 
 #### Preprocessed Data and Word Embedding File
 
-* Word Embedding File: [word2vec wordembeddings](http://kinloch.inf.ed.ac.uk/public/1-billion-benchmark-wordembeddings.tar.gz) trained on "1 billion word language modeling benchmark r13output" (405MB)
+* Pretrained word embedding file: [Word2vec word embeddings](http://kinloch.inf.ed.ac.uk/public/1-billion-benchmark-wordembeddings.tar.gz) trained on "1 billion word language modeling benchmark r13output" (405MB)
 
 #### Pretrained Model and Outputs
 
