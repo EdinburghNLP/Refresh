@@ -19,7 +19,7 @@ Please cite this paper if you use any of these:
 
 ## Live Demo
 
-You could find a live demo of Refresh <span class="plainlinks">[http://kinloch.inf.ed.ac.uk/sidenet.html here]</span>.
+You could find a live demo of Refresh [here](http://kinloch.inf.ed.ac.uk/sidenet.html Refresh Demo).
 
 
 
