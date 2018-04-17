@@ -1,10 +1,10 @@
 # Refresh: Ranking Sentences for Extractive Summarization with Reinforcement Learning
 
-This repository releases codes for our Refresh model, an improved version of [Sidenet](https://github.com/shashiongithub/sidenet). They use Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
+This repository releases codes for our Refresh model. It is improved from our code for [Sidenet](https://github.com/shashiongithub/sidenet). They use Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
 
 Please contact me at shashi.narayan@ed.ac.uk for any question.
 
-Please cite this paper if you use any of these:
+Please cite this paper if you use our code or data:
 
 **Ranking Sentences for Extractive Summarization with Reinforcement Learning, Shashi Narayan, Shay B. Cohen and Mirella Lapata, NAACL 2018.**
 
@@ -12,12 +12,14 @@ Please cite this paper if you use any of these:
 
 ## CNN and Dailymail Data
 
+In addition to our code, please find links to additional files which are not uploaded here. 
+
 #### Preprocessed Data and Word Embedding File
 
 * [Pretrained word embeddings](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-1-billion-benchmark-wordembeddings.tar.gz) trained on "1 billion word language modeling benchmark r13output" (405MB)
-* [Preprocessed CNN and DailyMail data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-preprocessed-input-data.tar.gz): Articles are tokenized/segmented with the orignal case. Then, words are replaced with word ids in the word embedding file + (PAD_ID = 0, UNK_ID = 1). (1.9GB) 
-* [Original Test and Validation mainbody data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-CNN-DM-Filtered-TokenizedSegmented.tar.gz): These files are used to assemble the summary. (35MB)
-* [Gold Test and Validation highlights](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-baseline-gold-data.tar.gz): These files are used for estimating the ROUGE scores. (11MB)
+* [Preprocessed CNN and DailyMail data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-preprocessed-input-data.tar.gz): Articles are tokenized/segmented with the original case. Then, words are replaced with word ids in the word embedding file + (PAD_ID = 0, UNK_ID = 1). (1.9GB) 
+* [Original Test and Validation mainbody data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-CNN-DM-Filtered-TokenizedSegmented.tar.gz): These files are used to assemble summaries. (35MB)
+* [Gold Test and Validation highlights](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-baseline-gold-data.tar.gz): These files are used to estimate ROUGE scores. (11MB)
 
 #### Best Pretrained Models
 
@@ -27,17 +29,17 @@ We train for a certain number of epochs and then we estimate ROUGE score on the 
 
 #### Human Evaluation Data
 
-We have selected 20 (10 CNN and 10 DailyMail) articles. Please see our paper for the experimental setup.
+We have selected 20 (10 CNN and 10 DailyMail) articles. Please see our paper for the experiment setup.
 
 * [CNN and DailyMail Human Evaluation Data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-human-evaluations.tar.gz)
 
 ## Training and Evaluation Instructions
 
-Please download data using the above links and then either update `my_flags.py` for the following parameters or pass them as inline arguments:
+Please download data using the above links and then either update `my_flags.py` for the following parameters or pass them as in-line arguments:
 
 ```
 pretrained_wordembedding: /address/data/1-billion-word-language-modeling-benchmark-r13output.word2vec.vec (Pretrained wordembedding file trained on the one million benchmark data)
-preprocessed_data_directory: /address/data/preprocessed-input-directory (Pretrained news articles for various types of word embeddings)
+preprocessed_data_directory: /address/data/preprocessed-input-directory (Preprocessed news articles)
 gold_summary_directory: /address/data/Baseline-Gold-Models (Gold summary directory)
 doc_sentence_directory: /address/data/CNN-DM-Filtered-TokenizedSegmented (Directory where document sentences are kept)
 ```
@@ -68,8 +70,13 @@ python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dail
 python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 10 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model10.log
 ```
 
-## Blog and Live Demo
+## Blog post and Live Demo
 
-You could find a live demo of Refresh [here](http://kinloch.inf.ed.ac.uk/sidenet.html). 
+You could find a live demo of Refresh [here](http://kinloch.inf.ed.ac.uk/sidenet.html).
 
-[nurture.ai](https://nurture.ai) has written a [blog](https://nurture.ai/p/e5c2a653-404a-4af8-b35f-e9e0d17fd272) on our paper.
+See here for a light introduction of our paper written by [nurture.ai](https://nurture.ai/p/e5c2a653-404a-4af8-b35f-e9e0d17fd272).
+
+<!---
+Model predictions, CNN best model was lost from adamski server, I have uploaded the next best one. 
+Preprocessing codes: estimate multioracle
+--->
