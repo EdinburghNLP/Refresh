@@ -66,8 +66,6 @@ python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dail
 
 # Evaluation
 python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 7 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model7.log
-
-python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 10 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model10.log
 ```
 
 ## Blog post and Live Demo
