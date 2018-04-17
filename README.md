@@ -17,7 +17,7 @@ In addition to our code, please find links to additional files which are not upl
 #### Preprocessed Data and Word Embedding File
 
 * [Pretrained word embeddings](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-1-billion-benchmark-wordembeddings.tar.gz) trained on "1 billion word language modeling benchmark r13output" (405MB)
-* [Preprocessed CNN and DailyMail data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-preprocessed-input-data.tar.gz): Articles are tokenized/segmented with the original case. Then, words are replaced with word ids in the word embedding file + (PAD_ID = 0, UNK_ID = 1). (1.9GB) 
+* [Preprocessed CNN and DailyMail data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-preprocessed-input-data.tar.gz): Articles are tokenized/segmented with the original case. Then, words are replaced with word ids in the word embedding file with (PAD_ID = 0, UNK_ID = 1). (1.9GB) 
 * [Original Test and Validation mainbody data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-CNN-DM-Filtered-TokenizedSegmented.tar.gz): These files are used to assemble summaries. (35MB)
 * [Gold Test and Validation highlights](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-baseline-gold-data.tar.gz): These files are used to estimate ROUGE scores. (11MB)
 
