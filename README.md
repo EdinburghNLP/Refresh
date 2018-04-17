@@ -14,16 +14,33 @@ Please cite this paper if you use any of these:
 
 #### Preprocessed Data and Word Embedding File
 
-* Pretrained word embedding file: [Word2vec word embeddings](http://kinloch.inf.ed.ac.uk/public/1-billion-benchmark-wordembeddings.tar.gz) trained on "1 billion word language modeling benchmark r13output" (405MB)
+* [Pretrained word embeddings](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-1-billion-benchmark-wordembeddings.tar.gz) trained on "1 billion word language modeling benchmark r13output" (405MB)
+* [Preprocessed CNN and DailyMail data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-preprocessed-input-data.tar.gz): Articles are tokenized/segmented with the orignal case. Then, words are replaced with word ids in the word embedding file + (PAD_ID = 0, UNK_ID = 1). (1.9GB) 
+* [Original Test and Validation mainbody data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-CNN-DM-Filtered-TokenizedSegmented.tar.gz): These files are used to assemble the summary. (35MB)
+* [Gold Test and Validation highlights](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-baseline-gold-data.tar.gz): These files are used for estimating the ROUGE scores. (11MB)
 
-#### Pretrained Model and Outputs
+#### Best Pretrained Models
+
+We train for a certain number of epochs and then we estimate ROUGE score on the validation set after each epoch. The chosen models are the best ones performing on the validation set.  
+
+* [CNN and DailyMail Pretrained Models](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-pretrained-models.tar.gz) (1.8GB)
 
 #### Human Evaluation Data
 
+We have selected 20 (10 CNN and 10 DailyMail) articles. Please see our paper for the experimental setup.
+
+* [CNN and DailyMail Human Evaluation Data](http://kinloch.inf.ed.ac.uk/public/Refresh-NAACL18-human-evaluations.tar.gz)
 
 ## Training and Evaluation Instructions
 
-We run for certain number of epochs and then we estimate ROUGE scores and 
+Please download data using the above links and then either update `my_flags.py` for the following parameters or pass them as inline arguments:
+
+```
+pretrained_wordembedding: /address/data/1-billion-word-language-modeling-benchmark-r13output.word2vec.vec (Pretrained wordembedding file trained on the one million benchmark data)
+preprocessed_data_directory: /address/data/preprocessed-input-directory (Pretrained news articles for various types of word embeddings)
+gold_summary_directory: /address/data/Baseline-Gold-Models (Gold summary directory)
+doc_sentence_directory: /address/data/CNN-DM-Filtered-TokenizedSegmented (Directory where document sentences are kept)
+```
 
 #### CNN 
 
@@ -58,14 +75,5 @@ You could find a live demo of Refresh [here](http://kinloch.inf.ed.ac.uk/sidenet
 [nurture.ai](https://nurture.ai) has written a [blog](https://nurture.ai/p/e5c2a653-404a-4af8-b35f-e9e0d17fd272) on our paper.
 
 
-
-
-CNN and DailyMail model
-Wordembedding file
-Original and Preprocessed Training Data
-Model Outputs
-Human Evaluation Data
-Code
-
-Preprocessing codes: estimate multioracle
-
+[comment]: <> Model predictions, CNN best model was lost from adamski server, I have uploaded the next best one. 
+[comment]: <> Preprocessing codes: estimate multioracle
