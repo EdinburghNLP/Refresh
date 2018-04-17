@@ -1,6 +1,6 @@
 # Refresh: Ranking Sentences for Extractive Summarization with Reinforcement Learning
 
-This repository releases codes for our Refresh model. It is improved from our code for [Sidenet](https://github.com/shashiongithub/sidenet). They use Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
+This repository releases our code for the Refresh model. It is improved from our code for [Sidenet](https://github.com/shashiongithub/sidenet). It uses Tensorflow 0.10, please use scripts provided by Tensorflow to translate them to newer upgrades. 
 
 Please contact me at shashi.narayan@ed.ac.uk for any question.
 
@@ -74,9 +74,5 @@ python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dail
 
 You could find a live demo of Refresh [here](http://kinloch.inf.ed.ac.uk/sidenet.html).
 
-See here for a light introduction of our paper written by [nurture.ai](https://nurture.ai/p/e5c2a653-404a-4af8-b35f-e9e0d17fd272).
+See [here](https://nurture.ai/p/e5c2a653-404a-4af8-b35f-e9e0d17fd272) for a light introduction of our paper written by [nurture.ai](https://nurture.ai).
 
-<!---
-Model predictions, CNN best model was lost from adamski server, I have uploaded the next best one. 
-Preprocessing codes: estimate multioracle
---->
