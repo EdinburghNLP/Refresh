@@ -73,7 +73,3 @@ python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dail
 You could find a live demo of Refresh [here](http://kinloch.inf.ed.ac.uk/sidenet.html). 
 
 [nurture.ai](https://nurture.ai) has written a [blog](https://nurture.ai/p/e5c2a653-404a-4af8-b35f-e9e0d17fd272) on our paper.
-
-
-[comment]: <> Model predictions, CNN best model was lost from adamski server, I have uploaded the next best one. 
-[comment]: <> Preprocessing codes: estimate multioracle
