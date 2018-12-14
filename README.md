@@ -68,6 +68,10 @@ python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dail
 python document_summarizer_training_testing.py --use_gpu /gpu:2 --data_mode dailymail --exp_mode test --model_to_load 7 --train_dir /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15 --num_sample_rollout 15 > /address/to/training/directory/dailymail-reinforcementlearn-singlesample-from-moracle-noatt-sample15/test.model7.log
 ```
 
+## Oracle Estimation
+
+Check our "scripts/oracle-estimator" to compute multiple oracles for your own dataset for training. 
+
 ## Blog post and Live Demo
 
 You could find a live demo of Refresh [here](http://kinloch.inf.ed.ac.uk/sidenet.html).
